@@ -34,8 +34,8 @@
 		region { name="buttons" width=max height=36 align="bottom" }
 		region { name="body" margin-left=0 margin-right=20 margin-bottom=46 margin-top=36 }
 
-		place { control="settingslist" end=sheet region=body width=165 height=max }
-		place { control="sheet" start=settingslist region=body width=440 height=max y=6 x=20 }
+		place { control="settingslist" end=sheet region=body width=165 height=max spacing=-4 }
+		place { control="sheet" start=settingslist region=body width=440 height=max y=6 x=20 spacing=-4 }
 		place { control="okbutton,cancelbutton" region="buttons"
 						width=92 height=25 align=right
 						margin-right=10 margin-top=0
