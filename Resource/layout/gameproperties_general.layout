@@ -1,0 +1,33 @@
+"resource/layout/gameproperties_general.layout"
+{
+	styles
+	{
+		button
+		{
+			minimum-height=24
+		}
+	}
+
+	layout
+	{
+		region { name=main margin=20 }
+		place { controls="HomepageLabelName,DeveloperLabelName,ManualLabelName" region=main spacing=10 y=0 dir=down }
+		place { controls="HomepageLabel,DeveloperLabel,ManualLabel,NoManualLabel" region=main spacing=10 y=0 x=100 dir=down }
+
+		place {control=Divider1 start=ManualLabelName dir=down margin-top=20 region=main width=max }
+
+		place {controls=EnableOverlayCheck,EnableDesktopGameTheater start=Divider1 dir=down margin-top=20 spacing=0 width=max region=main }
+		place {controls=LaunchOptionsButton,CreateDesktopShortcutButton start=EnableDesktopGameTheater dir=down margin-top=15 spacing=10 width=240 height=24 region=main }
+
+		place {control=Divider2 start=CreateDesktopShortcutButton dir=down margin-top=20 region=main width=max }
+
+		place {control=SteamInputPerGameLabel,SteamInputPerGameCombo start=Divider2 dir=down margin-top=20 spacing=10 region=main width=max }
+
+		place {control=Divider3 start=SteamInputPerGameCombo dir=down margin-top=20 region=main width=max }
+
+		place {control=SteamPlayOverrideCheck,SteamPlayOverrideCombo start=Divider3 dir=down margin-top=20 spacing=0 region=main width=max }
+
+		place { control=FamilySharingUnsupportedLabel,ExternalSignupLabel region=main start=SteamPlayOverrideCombo dir=down spacing=10 y=20 }
+		
+	}
+}
