@@ -15,23 +15,26 @@
   {
     region { name=box width=max height=max }
 
-    place { control="AdvancedHostOptions,AdvancedClientOptions" height=24 }
-
     place { control=DescriptionLabel		region=box dir=down width=max }
     place { control=RemoteClientList		start=DescriptionLabel region=box dir=down width=max margin-top=10 margin-left=0 }
     place { control=EnableStreaming			start=RemoteClientList region=box dir=down width=max margin-top=10 }
-    place { control=SetPin start=EnableStreaming region=box dir=down y=10 width=140 }
-    place { control=Pair start=SetPin region=box dir=right y=0 width=140 }
-	place { control=Unpair start=Pair region=box dir=right y=0 width=140 }
+    place { control=Pair start=EnableStreaming region=box dir=down margin-top=10 width=140}
+    place { control=Unpair start=Pair region=box dir=right y=0 width=140 margin-left=5  }
+    place { control=SetPin start=Unpair region=box dir=right width=140 margin-left=5  }
 
-    place { control=HostDivider				start=SetPin region=box dir=down width=max margin-top=15 }
+    place { control=P2PScopeLabel	start=Pair region=box dir=down width=max margin-top=15 }
+    place { control=P2PScope	start=P2PScopeLabel region=box height=24 dir=down width=max margin-top=10 }
+
+    place { control=HostDivider				start=P2PScope region=box dir=down width=max margin-top=15 }
     place {	control=HostLabel				start=HostDivider region=box dir=down width=max margin-top=15 }
-    place { control=AdvancedHostOptions		start=HostLabel region=box dir=down width=280 margin-top=10 }
+    place { control=UnsupportedPlatform		start=HostLabel region=box dir=down width=max margin-top=10 height=24 }
+    place { control=AdvancedHostOptions		start=HostLabel region=box dir=down width=280 margin-top=10 height=24 }
 
-    place { control=ClientDivider			start=AdvancedHostOptions region=box dir=down width=max margin-top=21 }
-    place { control=ClientLabel				start=ClientDivider region=box dir=down width=max margin-top=16 }
+    place { control=ClientDivider			start=HostDivider region=box dir=down width=max margin-top=70 }
+    place { control=ClientLabelLocal				start=ClientDivider region=box dir=down width=max margin-top=10 }
+    place { control=ClientLabelRemote				start=ClientDivider region=box dir=down width=max margin-top=10 }
 
-    place { control=QualityFast				start=ClientLabel region=box dir=down margin-top=10 }
+    place { control=QualityFast				start=ClientLabelLocal region=box dir=down margin-top=10 }
 
     place
     {
@@ -44,7 +47,8 @@
 
     place { control=AdvancedClientOptions	start=QualityFast region=box dir=down width=280 margin-top=10 }
 
+
     place { control=SupportInformationLabel start=AdvancedClientOptions region=box dir=down margin-top=10 }
-	
+
   }
 }
