@@ -41,7 +41,22 @@
 			y=5
 		}
 
-		place { control=LibraryDisplaySizeLabel dir=down width=max start=LibraryDisableCommunityContentLabel dir=down y=30 }
+		place {
+			control=LibraryDisplayIconInGameListCheckbox
+			dir=down
+			width=max
+			start=LibraryDisableCommunityContentLabel
+			y=10
+		}
+		place {
+			control=LibraryDisplayIconInGameListLabel
+			dir=down
+			width=max
+			start=LibraryDisplayIconInGameListCheckbox
+			y=5
+		}
+
+		place { control=LibraryDisplaySizeLabel dir=down width=max start=LibraryDisplayIconInGameListCheckbox dir=down margin-top=30 }
 
 		place { control=LibraryDisplaySizeAutomatic start=LibraryDisplaySizeLabel dir=down y=5 }
 		place { control=LibraryDisplaySizeSmall start=LibraryDisplaySizeAutomatic dir=right margin-left=10 }
