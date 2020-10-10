@@ -7,10 +7,10 @@
 		place { controls=DescriptionLabel					region=box width=max }
 		place { controls=EnableOverlayCheck,EnableSCTenFootOverlayCheck,EnableVRDesktopGameTheaterCheck					region=box dir=down width=max start=DescriptionLabel margin-top=10 }
 
-		place { controls=HotKeySelectorLabel				region=box dir=down start=EnableVRDesktopGameTheaterCheck margin-top=10 }
+		place { controls=HotKeySelectorLabel				region=box dir=down start=EnableSCTenFootOverlayCheck margin-top=10 }
 		place { controls=HotKeySelector						region=box dir=down width=200 height=24 start=HotKeySelectorLabel margin-top=10 }
 
-		place { control=ShowIngameFPSLabel									dir=down x=220 start=EnableVRDesktopGameTheaterCheck y=10 }
+		place { control=ShowIngameFPSLabel									dir=down x=220 start=EnableSCTenFootOverlayCheck y=10 }
 		place { control=ShowIngameFPSCombo									dir=down width=200 start=ShowIngameFPSLabel y=10 }
 
 		place { control=ShowIngameFPSContrastCheck					dir=down start=ShowIngameFPSCombo y=20 }
@@ -27,7 +27,11 @@
 		place { controls=ScreenshotLabel					region=box dir=down dir=down start=Divider1 margin-top=15 x=220 }
 		place { controls=ScreenshotHotKeySelector			region=box dir=down width=200 height=24 start=ScreenshotLabel margin-top=10 }
 
-		place { controls="PingRateLabel"					region=box dir=down width=max start=SetScreenshotFolderButton margin-top=38 }
+		place { controls="TextFilterLabel"					region=box dir=down width=max start=SetScreenshotFolderButton margin-top=20 }
+		place { controls="TextFilterStatus"					region=box dir=down width=max height=24 start=TextFilterLabel margin-top=10 }
+		place { controls="TextFilterUpdateSettingURL"		region=box dir=down width=max height=24 start=TextFilterStatus margin-top=5 }
+
+		place { controls="PingRateLabel"					region=box dir=down width=max start=TextFilterUpdateSettingURL margin-top=20 }
 		place { controls="PingRateCombo"					region=box dir=down width=280 height=24 start=PingRateLabel margin-top=10 }
 
 		place { control="TitleLabel,PingRateInfo" height=0 width=0 }
